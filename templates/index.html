@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Contents</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>目录{{ items|length }}</h1>
+    <table>
+        {% for item in items %}
+        <tr>
+            <td><a href="{{ item.id }}">{{ item.name }}</a></td>
+        </tr>
+        <tr>
+            <td>{{ item.content[:10] }}</td>
+            <td>{{ item.date_created.date() }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

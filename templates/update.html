@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Update Contents</h1>
+
+    <div>
+        <form action = "/hidden-link/update/{{item.id}}", method="POST">
+<!--            <input type="text" name="content" value="{{item.content}}" style="font-size:18pt;height:420px;width:200px;">-->
+            <textarea name="content" cols="100" rows="10">{{item.content}}</textarea>
+            <input type="submit" value="Update Content">
+        </form>
+    </div>
+
+    <p><a href="/">Go Back!</a></p>
+</div>
+{% endblock %}
+

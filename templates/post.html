@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Post</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Update Contents</h1>
+
+    <div>
+        <form action = "/hidden-link/post-new", method="POST">
+            <input type="text" name="name">
+            <textarea name="content" cols="100" rows="10"></textarea>
+            <input type="submit" value="Update Content">
+        </form>
+    </div>
+
+    <p><a href="/">Go Back!</a></p>
+</div>
+{% endblock %}
